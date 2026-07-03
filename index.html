@@ -19,7 +19,6 @@
       background: #120f1c;
     }
 
-    /* Fundo com sua arte */
     #bg {
       position: fixed;
       inset: 0;
@@ -30,7 +29,6 @@
       z-index: 0;
     }
 
-    /* Camada escura leve para deixar as caixas legíveis */
     #veil {
       position: fixed;
       inset: 0;
@@ -42,69 +40,78 @@
       position: absolute;
       z-index: 2;
       border: 3px solid rgba(245, 200, 66, 0.9);
-      border-radius: 18px;
+      border-radius: 14px;
       background: rgba(8, 10, 18, 0.16);
-      box-shadow: 0 0 20px rgba(245, 200, 66, 0.10);
+      box-shadow: 0 0 18px rgba(245, 200, 66, 0.10);
       backdrop-filter: blur(4px);
     }
 
-    /* Gameplay maior e com mais espaço */
+    /*
+      Proporção 2880x1800 = 16:10
+      Escalonando para caber na altura de 1080:
+      largura = 1080 * (2880/1800) = 1728px → muito largo
+      Então limitamos pela largura disponível (~1380px) e calculamos a altura:
+      altura = 1380 * (1800/2880) = 862px → também passa de 1080
+      Solução: usar proporção 16:10 mas cabendo no layout real com margem:
+      Gameplay: 1280px largura → altura = 1280 * (1800/2880) = 800px
+    */
     #gameplay {
-      left: 35px;
-      top: 35px;
-      width: 1120px;
-      height: 680px;
+      left: 18px;
+      top: 18px;
+      width: 1280px;
+      height: 800px;
     }
 
-    /* Webcam mais afastada da gameplay */
+    /* Webcam — coluna direita, topo */
     #webcam {
-      right: 35px;
-      top: 35px;
+      right: 18px;
+      top: 18px;
       width: 390px;
-      height: 240px;
+      height: 220px;
     }
 
-    /* Chat abaixo da webcam, com espaço entre os blocos */
+    /* Chat — abaixo da webcam, pequeno espaço entre eles */
     #chat {
-      right: 35px;
-      top: 300px;
+      right: 18px;
+      top: 252px;
       width: 390px;
-      height: 415px;
+      height: 546px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
     }
 
     #chat-header {
-      padding: 10px 12px;
+      padding: 8px 12px;
       text-align: center;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 900;
       letter-spacing: 2px;
       color: #20172d;
       background: linear-gradient(90deg, #ffd86b, #f4c842);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 
     #chat-messages {
       flex: 1;
-      padding: 12px;
+      padding: 10px;
+      overflow: hidden;
     }
 
-    /* Logo + nome */
+    /* Branding — abaixo da gameplay, canto inferior esquerdo */
     #branding {
       position: absolute;
-      left: 35px;
-      bottom: 28px;
+      left: 18px;
+      bottom: 16px;
       z-index: 2;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     #branding img {
-      width: 72px;
-      height: 72px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       border: 3px solid rgba(245, 200, 66, 0.9);
       background: rgba(10, 10, 18, 0.45);
@@ -112,9 +119,9 @@
     }
 
     #channel-name {
-      padding: 8px 16px;
-      border-radius: 12px;
-      font-size: 24px;
+      padding: 7px 14px;
+      border-radius: 10px;
+      font-size: 22px;
       font-weight: 900;
       letter-spacing: 1px;
       color: #ffd86b;
