@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background: transparent;
+      font-family: 'Arial Black', sans-serif;
+    }
+
+    /* ÁREA DA GAMEPLAY — canto superior esquerdo, grande */
+    #gameplay {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 1300px;
+      height: 720px;
+      border: 4px solid #f5c842;
+      border-radius: 16px;
+      background: rgba(0,0,0,0.3);
+    }
+
+    /* WEBCAM — canto superior direito */
+    #webcam {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 580px;
+      height: 326px;
+      border: 4px solid #f5c842;
+      border-radius: 16px;
+      background: rgba(0,0,0,0.3);
+    }
+
+    /* CHAT — abaixo da webcam, canto direito */
+    #chat {
+      position: absolute;
+      top: 366px;
+      right: 20px;
+      width: 580px;
+      height: 374px;
+      border: 4px solid #f5c842;
+      border-radius: 16px;
+      background: rgba(10, 60, 50, 0.75);
+      display: flex;
+      flex-direction: column;
+    }
+
+    #chat-header {
+      background: #f5c842;
+      color: #1a1a2e;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 900;
+      padding: 8px;
+      border-radius: 12px 12px 0 0;
+      letter-spacing: 2px;
+    }
+
+    #chat-messages {
+      flex: 1;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    /* LOGO + NOME — canto inferior esquerdo */
+    #branding {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    #branding img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid #f5c842;
+    }
+
+    #channel-name {
+      background: #1a1a2e;
+      color: #f5c842;
+      font-size: 28px;
+      font-weight: 900;
+      padding: 8px 18px;
+      border-radius: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ÁREA DA GAMEPLAY -->
+  <div id="gameplay"></div>
+
+  <!-- WEBCAM -->
+  <div id="webcam"></div>
+
+  <!-- CHAT -->
+  <div id="chat">
+    <div id="chat-header">CHAT</div>
+    <div id="chat-messages" class="screen_div"></div>
+  </div>
+
+  <!-- LOGO + NOME DO CANAL -->
+  <div id="branding">
+    <!-- Substitua o src pela URL da sua logo hospedada -->
+    <img src="SUA_LOGO_AQUI.png" alt="Logo Sato Noob" />
+    <div id="channel-name">Sato Noob</div>
+  </div>
+
+</body>
+</html>
