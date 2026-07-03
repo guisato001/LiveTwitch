@@ -16,10 +16,10 @@
     body {
       position: relative;
       font-family: Arial, Helvetica, sans-serif;
-      background: #1a1428;
+      background: #120f1c;
     }
 
-    /* Fundo principal */
+    /* Fundo com sua arte */
     #bg {
       position: fixed;
       inset: 0;
@@ -30,11 +30,11 @@
       z-index: 0;
     }
 
-    /* Camada escura leve para dar contraste */
+    /* Camada escura leve para deixar as caixas legíveis */
     #veil {
       position: fixed;
       inset: 0;
-      background: rgba(10, 8, 18, 0.14);
+      background: rgba(10, 8, 18, 0.12);
       z-index: 1;
     }
 
@@ -44,32 +44,32 @@
       border: 3px solid rgba(245, 200, 66, 0.9);
       border-radius: 18px;
       background: rgba(8, 10, 18, 0.16);
-      box-shadow: 0 0 22px rgba(245, 200, 66, 0.12);
+      box-shadow: 0 0 20px rgba(245, 200, 66, 0.10);
       backdrop-filter: blur(4px);
     }
 
-    /* GAMEPLAY - maior e com mais respiro */
+    /* Gameplay maior e com mais espaço */
     #gameplay {
       left: 35px;
-      top: 40px;
-      width: 1160px;
+      top: 35px;
+      width: 1120px;
       height: 680px;
     }
 
-    /* WEBCAM - mais afastada da gameplay */
+    /* Webcam mais afastada da gameplay */
     #webcam {
       right: 35px;
-      top: 40px;
-      width: 430px;
-      height: 250px;
+      top: 35px;
+      width: 390px;
+      height: 240px;
     }
 
-    /* CHAT - abaixo da webcam, com espaço entre os blocos */
+    /* Chat abaixo da webcam, com espaço entre os blocos */
     #chat {
       right: 35px;
-      top: 315px;
-      width: 430px;
-      height: 405px;
+      top: 300px;
+      width: 390px;
+      height: 415px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -91,7 +91,7 @@
       padding: 12px;
     }
 
-    /* LOGO + NOME */
+    /* Logo + nome */
     #branding {
       position: absolute;
       left: 35px;
